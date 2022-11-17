@@ -1,6 +1,6 @@
 import React from "react";
 
-const MenuList = ({ menu }) => {
+const MenuList = ({menu}) => {
   return (
     <>
       <section className="main-card--cointainer">
@@ -9,6 +9,7 @@ const MenuList = ({ menu }) => {
           const { id, name, category, image, description } = currentElement;
           return (
             <>
+           {/* Creating the full Reuseable container for all of the components   */}
               <div className="card-container" key={id}>
                 <div className="card">
                   <div className="card-body">
