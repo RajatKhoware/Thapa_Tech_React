@@ -1,23 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import MenuList from "./MenuList";
 import "./style.css";
+import Menu from "./menuApi";
+import Navbar from "./Navbar";
+
+//In this part we have created a unquie list
+//spread Opreator
+const uniqueList = [
+  ...new Set(
+    Menu.map((currentElement) => {
+      return currentElement.category;
+    })
+  ),
+  "All",
+];
 
 const Resturant = () => {
-    // we can also style anything using functionns also 
-    // const myStyle = {color : "grey"};
-    
+  const [menuData, setMenuData] = useState(Menu);
+  const [menuList, setMenuList] = useState(uniqueList);
+
+  const filteritem = (category) => {
+    if (category == "All") {
+      setMenuData(Menu);
+      return;
+    }
+    const updatedList = Menu.filter((currentElement) => {
+      return currentElement.category === category;
+    });
+    setMenuData(updatedList);
+  };
   return (
     <>
-      <div className="card-container">
-        <div className="card">
-          <div className="card-body">
-            <span className="card-number card-circle subtle">1</span>
-            <span className="card-author subtle"
-            // calling the function to use style like this 
-            //  style = {myStyle}
-             > Breakfast1</span>
-          </div>
-        </div>
-      </div>
+      <Navbar filteritem={filteritem} menuList={menuList} />
+      <MenuList menu={menuData} />
     </>
   );
 };
