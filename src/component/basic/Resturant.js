@@ -18,13 +18,14 @@ const uniqueList = [
 ];
 
 const Resturant = () => {
-  // Using Hooks 
+  // Using Hooks for getting the data from api
+  //const [stateVariable, updatedData] = useState(intialData);
   const [menuData, setMenuData] = useState(Menu);
-  const [menuList, setMenuList] = useState(uniqueList);
+  const [menuList] = useState(uniqueList);
 
   const filteritem = (category) => {
     // If we tap on all in nav bar this if condition works to gives data of all
-    if (category == "All") {
+    if (category === "All") {
       setMenuData(Menu);
       return;
     }

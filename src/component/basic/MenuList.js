@@ -5,7 +5,7 @@ const MenuList = ({menu}) => {
     <>
       <section className="main-card--cointainer">
         {menu.map((currentElement) => {
-          // This is know are destructring in react isme aab bar bar currentElement use karne ke need nhi hai
+          // This is know are destructring in react isme aab bar bar currentElement use karne ke need nhi hai !!
           const { id, name, category, image, description } = currentElement;
           return (
             <>

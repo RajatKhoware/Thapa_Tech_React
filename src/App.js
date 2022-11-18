@@ -1,10 +1,10 @@
 import React from 'react'
-import Resturant from './component/basic/Resturant'
+import UseReducer from './component/Hooks/useReducer'
 
 const App = () => {
   return (
     <div>
-      <Resturant/>
+      <UseReducer/>
     </div>
   )
 }
