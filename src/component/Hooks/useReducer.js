@@ -26,7 +26,7 @@ const UseReducer = () =>
     <>
       <div className="center_div">
         <p>{state}</p>
-        <div class="button2" onClick={() => dispatch({type: "INCR"})}>
+        <div className="button2" onClick={() => dispatch({type: "INCR"})}>
           <span></span>
           <span></span>
           <span></span>

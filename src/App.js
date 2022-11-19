@@ -1,13 +1,12 @@
-import React from 'react'
-import UseReducer from './component/Hooks/useReducer'
+import React from "react";
+import Todos from "./component/Todos/todos";
 
 const App = () => {
   return (
     <div>
-      <UseReducer/>
+      <Todos />
     </div>
-  )
-}
+  );
+};
 
-export default App
-
+export default App;
