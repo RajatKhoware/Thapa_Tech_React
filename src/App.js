@@ -1,10 +1,11 @@
 import React from "react";
-import Todos from "./component/Todos/todos";
+import Weather from "./component/Weather/weather";
+
 
 const App = () => {
   return (
     <div>
-      <Todos />
+     <Weather/>
     </div>
   );
 };
